@@ -1,112 +1,390 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style data-merge-styles="true"></style>
   <meta http-equiv="Content-Type" content="text/html; charset=" euc-jp"="">
-  <title>Samples of Adversarial DNN-Based Voice Conversion</title>
- <style type="text/css">
-  @media print {
-    .ms-editor-squiggler {
-        display:none !important;
-    }
-  }
-  .ms-editor-squiggler {
-    all: initial;
-    display: block !important;
-    height: 0px !important;
-    width: 0px !important;
-  }</style><style type="text/css">
-  @media print {
-    .ms-editor-squiggler {
-        display:none !important;
-    }
-  }
-  .ms-editor-squiggler {
-    all: initial;
-    display: block !important;
-    height: 0px !important;
-    width: 0px !important;
-  }</style><script async="" src="./vocal_audition/analytics.js.&#12480;&#12454;&#12531;&#12525;&#12540;&#12489;"></script><script type="text/javascript" src="./vocal_audition/JP_chrome.js.&#12480;&#12454;&#12531;&#12525;&#12540;&#12489;" data-awssuidacr="I8ldmOgWsLHbHJTvSatWFxhy7hTkKv2Z"></script><script type="text/javascript" async="" src="./vocal_audition/taas"></script></head>
- <body>
+  <title>Vocal audition</title>
 
 <style type="text/css">
-<!--
 h1 {
     font-size: 1.2em;
 }
-
 table {
     border-collapse: collapse;
     border: 1px solid #336699;
 }
-
 th,td {
     border: 1px solid #336699;
     padding: 2px;
 	text-align: left;
 }
-//-->
 </style>
 
 <h2>Vocal audition</h2>
 
 
 <table border="0" cellspacing="0" cellpadding="0" align="left">
-<tbody><tr>
-<td height="40" width="120">Samples</td>
-<td height="40" width="120">Natural (source)</td>
-<td height="40" width="120">Natural (target)</td>
-<td height="40" width="120">MGE-FF</td>
-<td height="40" width="120">MGE-HW</td>
-<td height="40" width="120">ADV-FF</td>
-<td height="40" width="120">ADV-HW</td>
-</tr>
-<tr>
-<td>1</td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_src/j01.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_tgt/j01.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_ff/j01.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_hw/j01.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_ff/j01.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_hw/j01.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-</tr>
-<tr>
-<td>2</td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_src/j02.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_tgt/j02.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_ff/j02.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_hw/j02.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_ff/j02.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_hw/j02.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-</tr>
-<tr>
-<td>3</td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_src/j03.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_tgt/j03.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_ff/j03.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_hw/j03.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_ff/j03.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_hw/j03.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-</tr>
-<tr>
-<td>4</td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_src/j04.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_tgt/j04.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_ff/j04.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_hw/j04.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_ff/j04.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_hw/j04.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-</tr>
-<tr>
-<td>5</td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_src/j05.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="Natural_tgt/j05.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_ff/j05.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="MGE_hw/j05.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_ff/j05.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-<td><a onclick="this.firstChild.play()"><audio><source src="ADV_hw/j05.wav"></audio><img width="30" alt="" src="./vocal_audition/audio.jpg" height="30"></a></td>
-</tr>
-<tr>
-</tr>
-</tbody></table> 
-
-
-<iframe src="./vocal_audition/saved_resource.html" style="display: none;"></iframe></body><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; bottom: 0px; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-size: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: flex; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: column-reverse; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; left: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: 1em; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: initial; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: fixed; quotes: initial; r: initial; resize: initial; right: 0px; ruby-position: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; top: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; -webkit-app-region: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"></div><div style="color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-size: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: initial; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; ruby-position: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; -webkit-app-region: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"><div style="all: initial;"></div></div></div></editor-card></html>
+	<tbody>
+		<tr>
+			<td height="40" width="120">Unit</td>
+			<td height="40" width="120">Idol</td>
+			<td height="40" width="120">Aoiro</td>
+			<td height="40" width="120">Yuma</td>
+			<td height="40" width="120">Sora</td>
+			<td height="40" width="120">Ushio</td>
+		</tr>
+		<tr>
+			<td rowspan="3">Illumination Stars</td>
+			<td>Mano</td>
+			<td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_mano_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_mano_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_mano_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_prisism.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_mano_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_" controls></audio> -->
+      </td>
+      <td>
+        <!-- <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Hiori</td>
+			<td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_hiori_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_hiori_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_prisism.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_hiori_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_hiori_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_hiori_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_hiori_u.mp3" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Meguru</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_meguru_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_meguru_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_meguru_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_prisism.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_meguru_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_meguru_u.mp3" controls></audio>
+      </td>
+      <td>
+        <!-- <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_meguru_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_meguru_u.mp3" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td rowspan="5">L'Antica</td>
+			<td>Kogane</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_kogane_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_kogane_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_kogane_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_kogane_u.mp3" controls></audio>
+      </td>
+      <td>
+        <!-- <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Mamimi</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_mamimi_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_mamimi_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_mamimi_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_mamimi_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_mamimi_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_mamimi_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Sakuya</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_sakuya_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_sakuya_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_sakuya_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_sakuya_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_sakuya_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_sakuya_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Yuika</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_yuika_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_yuika_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_yuika_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_yuika_s.mp3" controls></audio><br>
+        <!-- <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_yuika_u.mp3" controls></audio> -->
+      </td>
+      <td>
+        <!-- <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Kiriko</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_kiriko_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_kiriko_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kiriko_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_kiriko_s.mp3" controls></audio><br>
+        <figcaption>Genwaku Silhouette:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_kiriko_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_kiriko_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td rowspan="3">Straylight</td>
+			<td>Asahi</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_asahi_s.mp3" controls></audio><br>
+        <figcaption>iMIT@TION WING 06a (neutral):</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_asahi_u1.mp3" controls></audio>
+        <figcaption>iMIT@TION WING 06a (high):</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_asahi_u2.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_asahi_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_asahi_s.mp3" controls></audio><br>
+        <!-- <figcaption>iMIT@TION WING 06a:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_asahi_u.mp3" controls></audio> -->
+      </td>
+      <td>
+        <!-- <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Fuyuko</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_fuyuko_s.mp3" controls></audio><br>
+        <figcaption>iMIT@TION WING 06a:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_fuyuko_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_fuyuko_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_kogane_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_fuyuko_s.mp3" controls></audio><br>
+        <figcaption>iMIT@TION WING 06a:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_fuyuko_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_fuyuko_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Mei</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_mei_s.mp3" controls></audio><br>
+        <!-- <figcaption>iMIT@TION WING 06a:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_asahi_u1.mp3" controls></audio> -->
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_mei_s.mp3" controls></audio><br>
+        <!-- <figcaption>iMIT@TION WING 06a:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_" controls></audio> -->
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_mei_s.mp3" controls></audio><br>
+        <!-- <figcaption>iMIT@TION WING 06a:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_asahi_u.mp3" controls></audio> -->
+      </td>
+      <td>
+        <!-- <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td rowspan="2">SHHis</td>
+			<td>Nichika</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_nichika_s.mp3" controls></audio><br>
+        <figcaption>OH MY GOD:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_nichika_u.mp3" controls></audio>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_nichika_s.mp3" controls></audio><br>
+        <figcaption>OH MY GOD (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_omg.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_nichika_s.mp3" controls></audio><br>
+        <figcaption>OH MY GOD:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_nichika_u.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_nichika_s.mp3" controls></audio><br>
+        <!-- <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+		<tr>
+			<td>Mikoto</td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_mikoto_s.mp3" controls></audio><br>
+        <figcaption>OH MY GOD:</figcaption>
+        <audio src="./vocal_audition/remix_aoiro/aoiro_mikoto_u.mp3" controls></audio>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_mikoto_s.mp3" controls></audio><br>
+        <figcaption>OH MY GOD (all):</figcaption>
+        <audio src="./vocal_audition/remix_yuma/yuma_omg.mp3" controls></audio>
+      </td>
+      <td>
+        <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_mikoto_s.mp3" controls></audio><br>
+        <!-- <figcaption>OH MY GOD:</figcaption>
+        <audio src="./vocal_audition/remix_sora/sora_mikoto_u.mp3" controls></audio> -->
+      </td>
+      <td>
+        <!-- <figcaption>Shinography:</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_mikoto_s.mp3" controls></audio><br>
+        <figcaption>PRISMISM (all):</figcaption>
+        <audio src="./vocal_audition/remix_ushio/ushio_" controls></audio> -->
+      </td>
+		</tr>
+	</tbody>
+</table>
+</html>
